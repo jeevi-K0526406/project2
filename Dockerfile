@@ -3,5 +3,5 @@ FROM node:20
 WORKDIR /app
 
 COPY . .
-EXPOSE 8082
+EXPOSE 3000
 CMD ["node", "app.js"]
