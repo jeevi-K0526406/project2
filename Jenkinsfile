@@ -24,13 +24,13 @@ pipeline {
  
         stage("Build Docker Image"){
             steps{
-                sh ' docker build -t mywebappss . '
+                sh ' docker build -t mywebappsss . '
             }
         }
         stage("Run Container"){
             steps{
-		        sh ' docker rm -f mywebappss -container || true '
-                sh ' docker run -d --name mywebappss -p 8082:3000 mywebappss'
+		        sh ' docker rm -f mywebappsss -container || true '
+                sh ' docker run -d --name mywebappsss -p 8082:3000 mywebappsss'
             }
         }
     }
