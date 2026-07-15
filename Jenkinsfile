@@ -17,8 +17,8 @@ pipeline {
  
         stage('Test') {
             steps {
-                sh 'npm intsall'
-                sh 'npm run'
+                sh ' npm install '
+                sh ' npm run '
             }
         }
  
