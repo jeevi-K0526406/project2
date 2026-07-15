@@ -17,20 +17,20 @@ pipeline {
  
         stage('Test') {
             steps {
-                sh 'npm intsalll'
+                sh 'npm intsall'
                 sh 'npm run'
             }
         }
  
         stage("Build Docker Image"){
             steps{
-                sh 'docker build -t docsapp .'
+                sh 'docker build -t myapp .'
             }
         }
         stage("Run Container"){
             steps{
-		        sh 'docker rm -f docsapp-container || true'
-                sh 'docker run -d --name docsapp-container -p 8081:80 docsapp'
+		        sh 'docker rm -f myapp-container || true'
+                sh 'docker run -d --name myapp -container -p 8082:80 myapp'
             }
         }
     }
