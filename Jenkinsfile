@@ -24,13 +24,13 @@ pipeline {
  
         stage("Build Docker Image"){
             steps{
-                sh ' sudo docker build -t myapp . '
+                sh ' docker build -t myapp . '
             }
         }
         stage("Run Container"){
             steps{
-		        sh ' sudo docker rm -f myapp-container || true '
-                sh ' sudo docker run -d --name myapp -container -p 8082:80 myapp '
+		        sh ' docker rm -f myapp-container || true '
+                sh ' docker run -d --name myapp -container -p 8082:80 myapp '
             }
         }
     }
