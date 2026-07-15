@@ -29,8 +29,8 @@ pipeline {
         }
         stage("Run Container"){
             steps{
-		        sh ' docker rm -f webapp -container || true '
-                sh ' docker run -d --name webapp -p 8082:80 webapp '
+		        sh ' docker rm -f docsapp -container || true '
+                sh ' docker run -d --name docsapp -p 8082:80 docsapp '
             }
         }
     }
