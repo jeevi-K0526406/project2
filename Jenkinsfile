@@ -30,7 +30,7 @@ pipeline {
         stage("Run Container"){
             steps{
 		        sh ' docker rm -f docsapp -container || true '
-                sh ' docker run -d --name docsapp -p 8082:80 docsapp '
+                sh ' docker run -d --name docsapp -p 8082:3000 docsapp '
             }
         }
     }
